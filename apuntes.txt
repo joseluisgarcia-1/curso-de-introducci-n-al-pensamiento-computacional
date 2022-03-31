@@ -573,6 +573,50 @@ IMPORTANTE
 
 https://www.datacamp.com/community/tutorials/python-dictionary-comprehension
 
+***Clase 25 Pruebas de caja negra***
+
+- Se basan en una especificación de la función o el programa
+- Prueba inputs y outputs
+- Unit testing o integration testing
+
+TDD o Test Driven Development es una metodología donde hacemos todo al revés. Por un momento vamos a dejar de programar para dedicarnos a escribir las pruebas.
+
+Pero, ¿cómo vamos a saber lo que debemos probar si ni siquiera hemos escrito el código? Muy buena pregunta. Eso es exactamente lo que vamos a descubrir a continuación.
+
+Objetivo: agilizar nuestro desarrollo
+Las pruebas son código que escribimos para comprobar que otra parte del código funciona correctamente. Sin embargo, no debemos olvidar que podemos caer en muy malas prácticas al escribir nuestro código sin saber exactamente lo que debe hacer, qué resultados debemos conseguir o cuándo deben saltar las alarmas.
+
+En ocasiones puede parecer que es más demorado. Pero, así como toda buena práctica, esto es solo al principio, solo es un primer “obstáculo” que debemos superar para conseguir muchos beneficios.
+
+A la larga, seguir estas metodologías y buenas prácticas nos ahorra tiempo y esfuerzo en errores que debemos resolver. Será mucho más fácil implementar nuevas características y evitaremos escribir código inútil que vamos a utilizar.
+
+Gracias a TDD podemos agilizar nuestro proceso de creación de código. Nos preocupamos más por el qué y el por qué antes del cómo. Todo el código que necesitamos para implementar eso que planeamos con las pruebas será problema un poco más adelante. Por ahora, lo que importa es asegurarnos que estamos resolviendo los problemas correctos.
+
+Cómo funciona: ciclo de vida de las pruebas
+TDD y el concepto de Black Box
+Nuestra metodología de pruebas funciona muy parecido a un concepto de sistemas y física que conocemos como Black Box: Estudiamos o trabajamos a partir de las entradas (inputs) y las salidas o respuestas que produce o debería producir nuestro sistema (outputs).
+
+Caja negra (sistemas) - Wikipedia.
+Con nuestras pruebas es igual. Definimos los argumentos que le enviamos a “la caja negra” y las posibles respuestas que debemos obtener dependiendo de las combinaciones de argumentos.
+
+El desarrollo de nuestras pruebas es el siguiente:
+
+Definimos los objetivos de nuestra prueba y escribimos su posible implementación. Nuestras pruebas deben fallar al principio porque, claramente, todavía no hemos programado el código que les permita funcionar correctamente. 🤔
+Programamos el código necesario para pasar las pruebas. 😎
+Redefinimos los objetivos. Podemos añadir nuevos casos de uso y refactorizar nuestro código para mejorar la aplicación. 😏
+Herramientas de TDD
+No hay una herramienta como tal para implementar la metodología de TDD. Más bien, existen herramientas que nos ayudan a escribir y correr nuestras pruebas de forma automatizada.
+
+Aquí algunas de las herramientas y frameworks más populares para diferentes lenguajes:
+
+JUnit para Java: Es gratuito y open source. Tiene muy buen soporte, mantenimiento y está en constante mejora con nuevas versiones. Nos permite probar EJBs, servlets y programas multihilo pero no hace pruebas unitarias en interfaces Swing, JSPs o HTML. Nos proporciona muy buena DX o experiencia a los desarrolladores ya que se integra muy bien con IntelliJ. Github.com/Junit-team.
+Jest para JavaScript: Existen muchas alternativas pero, Jest tiene una comunidad muy grande que ha creado más herramientas para mejorar aún más la experiencia de los desarrolladores. También es open source y tiene muy buen mantenimiento por sus creadores, de Facebook. Además, se integra muy bien con herramientas como React, Vue y Angular; funciona tanto del lado del cliente (frontend) como de lado del servidor (frontend y backend). Github.com/Facebook/Jest.
+En Python: Como te dije antes, TDD es una metodología y la podemos aplicar con cualquier herramienta. Por supuesto, existen librerías nativas o instalables que facilitan el desarrollo y automatización de pruebas en Python como unittest, pytest o Hypothesis.
+MiniTest para Ruby: También dispone de algunas herramientas nativas que nos dan algunas ayudas para escribir nuestras pruebas más fácilmente. Además, se integran muy bien con Rails y las gemas más populares de Ruby: MiniTest.
+Omití algunas herramientas y lenguajes que también pueden ser muy útiles. Si quieres, puedes decirme tus favoritos en los comentarios 😃.
+
+https://platzi.com/blog/que-es-y-como-funciona-tdd/
+
 ***Clase 25
 
 
