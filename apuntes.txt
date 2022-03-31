@@ -72,3 +72,76 @@ Traducen programas escritos en un lenguaje de programación al lenguaje máquina
 
 Compilador
 Permite traducir todo un programa de una sola vez, haciendo una ejecución más rápida y puede almacenarse para usarse luego sin volver a hacer la traducción.
+
+***Clase 4 Preparación de la computadora***
+
+Antes de comenzar este curso asegúrate de preparar tu entorno de trabajo para poder hacer todos los ejercicios. A continuación te compartiré los pasos que debes seguir para configurar tu computadora.
+
+Si estás usando Windows asegúrate de instalar lo siguiente en tu computadora:
+
+Python 3.7 (o superior)
+1. Para obtener el instalador dirígete a https://www.python.org/downloads/
+1.png
+2. Descarga el instalador y ejecútalo en tu computadora.
+2.png
+3. Habilita la casilla de verificación en Install launcher for all users y Add Python 3.8 to PATH. A continuación presiona en Install Now. Windows te solicitará permisos para instalar Python en tu computadora.
+3.png
+4. Al finalizar la instalación se abrirá una ventana como la siguiente, en ella deberás presionar en la opción Disable path length limit. Windows te solicitará permisos para realizar este cambio.
+4.png
+Visual Studio Code
+En el curso el profesor utiliza Visual Studio Code, un editor de textos que tiene integradas varias herramientas que te ayudarán a desarrollar tus ejercicios con facilidad. Para obtenerlo en tu computadora, dirígete a: https://code.visualstudio.com/
+
+4.png
+1. Realiza una instalación normal de Visual Studio code.
+6.png
+Una vez instalado se ejecutará Visual Studio Code.
+
+2. En Visual Studio Code dirígete al panel de Extensiones, se encuentra en el panel lateral izquierdo. Ahí deberás buscar la extensión llamada Python.
+6.png
+3. Selecciona la extensión creada por Microsoft, la identificarás por ser similar a la que se muestra en la imágen. Una vez seleccionada, instálala
+7.png
+4. Una vez instalada, reinicia Visual Studio Code.
+Listo con esto podrás correr los programas que escribas en python en la terminal de Visual Studio Code.
+
+Cuando quieras correr tu programa en la terminal de Visual Studio Code, puedes introducir la dirección como lo muestra el profesor en el curso o presionar en el botón “Run Python File in Terminal”
+
+***Clase 4 Elementos básicos de python***
+
+- Bajo nivel vs alto nivel
+    - alto nivel: significa que está diseñado para los humanos, es decir, que se acerca mucho más al lenguaje natural a la forma en que nos comunicamos
+    - bajo nivel: está diseñado para que lo entienda un máquina se parece más a unos y ceros
+- General vs dominio específico
+    - General: significa que tiene todos los primitivos que nos otorga turing para poder implementar o computar cualquier algoritmo
+    - Dominio específico:  son lenguajes especialidados a aplicaciones específicas
+- Interpretado vs compilado
+    - Interpretado: es decir la máquina lo va leyendo y cada instrucción la va convirtiendo a tiempo real en un lenguaje que pueda entender la máquina
+    - Compilado: 
+
+- Objetos:
+    Tipos:
+        - entero, flotantes, booleanos, etc
+    - Escalares: 
+        que se pueden subdividir
+    -No escalares:
+        que no se pueden subdividir
+
+***Clase 6 asignación de variables***
+
+Las variables son simplemente nombres asociados a espacios en memoria, y los vinculamos a través del operador de asignación
+Se lee de derecha a izquierda. Al contrario que la lectura normal.
+
+por ejemplo en explicación es así:
+a = 2
+x = 4
+z = (a*x/2)
+lo que le decimos ahí es que a tiene el valor de 2, x tiene el valor de 4, y z tiene el resultado de la operación entre a y x y divido 2
+- a las variables siempre se les da un nombre exacto de lo que significa, ejemplo:
+
+base = 2
+altura = 4
+area = (base*altura)/2
+
+- si tenemos una variable y esa variable apunta a un lugar de memoria y si nosotros reasignamos esa variable, simplemente pasamos a apuntar a otro lugar
+las variables en python:
+    - Pueden estár compuestas de mayúsculas, minúsculas, números (sin comenzar con uno), y el símbolo _
+    - No pueden llamarse como palabras reservadas de python
