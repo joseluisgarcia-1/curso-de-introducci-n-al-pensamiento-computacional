@@ -1,0 +1,1 @@
+#fue apuntes del ciclo for, mirar en el archivo de apuntes.txt, está bien explícito
