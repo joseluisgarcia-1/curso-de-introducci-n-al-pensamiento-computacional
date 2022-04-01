@@ -14,7 +14,7 @@ class PruebaDeCristalTest(unittest.TestCase):
         self.assertEqual(resultado, True)
 
     def test_es_menor_de_edad(self):
-        edad= 15
+        edad = 15
 
         resultado = es_mayor_de_edad(edad)
         self.assertEqual(resultado, False)
