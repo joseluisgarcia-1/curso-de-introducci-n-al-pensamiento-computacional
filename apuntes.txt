@@ -647,5 +647,9 @@ En general, cuanto mayor es la probabilidad y el impacto de los daños causados 
 Declarar que una prueba no ha descubierto ningún error no es lo mismo que declarar que el software es “libre de errores”. Con el fin de garantizar que los procedimientos adecuados de software de prueba se lleva a cabo en todas las situaciones, los evaluadores deben asumir que todo el software contiene algunos (aunque disimulada) errores.
 
 ***Clase 27 Debugging***
-
-
+Reglas generales
+- No te molestes con el debugger, aprende a usar el print statement
+- Estudia los datos disponibles
+- Utiliza los datos para crear hipótesis y experimentos. Método cientifico
+- Ten una mente abierta. Si entendieras el programa, probablemente no habrían bugs
+- Lleva un registro de lo que has tratado, preferentemente en la forma de tests
