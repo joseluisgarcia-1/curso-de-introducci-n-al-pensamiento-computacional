@@ -662,3 +662,69 @@ Reglas generales
 - Lleva un registro de lo que has tratado, preferentemente en forma de tests
 - Vete a dormir
 
+***Clase 28 Manejo de excepciones****
+
+- Son muy comunes en la programación, no tiene nada de excepcional
+- Las excepciones de python normalmente se relacionan con errores de semántica
+- Se pueden crear excepciones propias
+- Cuando una excepción no se maneja(unhandled exception), el programa termina en error
+- Las excepciones se maneja con los keywords: try, except, finally
+- Se pueden usar también para ramificar programas
+- No debe manejarse de manera silenciosa(por ejemplo, con print statements)
+- Para colocar tu propia excepción utiliza el keyword raise
+
+Excepciones comunes:
+ImportError : una importación falla;
+IndexError : una lista se indexa con un número fuera de rango;
+NameError : se usa una variable desconocida ;
+SyntaxError : el código no se puede analizar correctamente
+TypeError : se llama a una función en un valor de un tipo inapropiado;
+ValueError : se llama a una función en un valor del tipo correcto, pero con un valor inapropiado
+
+***Clase 29 Excepciones y controlde flujo***
+
+Excepciones como control de flujo
+Hasta ahora hemos visto como las excepciones nos permiten controlar los posibles errores que pueden ocurrir en nuestro código. Sin embargo, dentro de la comunidad de Python tienen otro uso: control de flujo.
+
+En este momento ya debes estar familiarizado con las estructuras de control flujo que ofrece Python (if... elif...else); entonces, ¿por qué es necesaria otra modalidad para controlar el flujo? Una razón muy específica: el principio EAFP (easier to ask for forgiveness than permission, es más fácil pedir perdón que permiso, por sus siglas en inglés).
+
+El principio EAFP es un estilo de programación común en Python en el cual se asumen llaves, índices o atributos válidos y se captura la excepción si la suposición resulta ser falsa. Es importante resaltar que otros lenguajes de programación favorecen el principio LBYL (look before you leap, revisa antes de saltar) en el cual el código verifica de manera explícita las precondiciones antes de realizar llamadas.
+
+Veamos ambos estilos:
+
+# Python
+
+def busca_pais(paises, pais):
+    &quot;&quot;&quot;
+    Paises es un diccionario. Pais es la llave.
+    Codigo con el principio EAFP.
+    &quot;&quot;&quot;
+    
+    try:
+        return paises[pais]
+    except KeyError:
+        return None
+// Javascript
+
+/**
+* Paises es un objeto. Pais es la llave.
+* Codigo con el principio LBYL.
+*/
+function buscaPais(paises, pais) {
+  if(!Object.keys(paises).includes(pais)) {
+    return null;
+  }
+
+  return paises[pais];
+}
+Como puedes ver, el código de Python accede directamente a la llave y únicamente si dicho acceso falla, entonces se captura la excepción y se provee el código necesario. En el caso de JavaScript, se verifica primero que la llave exista en el objeto y únicamente con posterioridad se accede.
+
+Es importante resaltar que ambos estilos pueden utilizarse en Python, pero el estilo EAFP es mucho más "pythonico".
+
+***Clase 30 Afirmaciones***
+
+- Programación defensiva
+- Pueden usarse para verificar que los tipos sean correctos en una función
+- También sirven para debuguear
+- Las afirmaciones es muy sencilla, necesitamos usar el keyword assert, dar una expresión booleana, es decir una condición que evalúe
+a verdadero o falso y agregar un mensaje, el cual accedemos a él cuando terminamos la ejecución
